@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gestor de usuarios UABC</title>
+    <link rel="shortcut icon" href="LogoUABC.ico" type="image/x-icon" /> 
+    <link rel="stylesheet" href="dropdownVertical.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="tabStepper.js"></script>
+  </head>
+  <body>
+    <div class="area"></div>
+    <nav class="main-menu">
+      <ul>
+            <p class="text-small text-center">MENÚ</p>
+        <li class="has-subnav active">
+          <a href="#">
+            <i class="fa fa-home fa-2x"></i>
+            <span class="nav-text"> Inicio </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+            <a href="#">
+                <i class="fa fa-envelope fa-2x"></i>
+                <span class="nav-text"> Gestión de Mensajes </span>          
+            </a>
+            <!-- Agrega el contenido del menú desplegable vertical -->
+            <ul class="dropdown-menu-vertical">
+                <li><a href="#"><i class="fa fa-bell fa-2x"></i><span class="nav-text">Notificaciones</span></a></li>
+                <li><a href="#"><i class="fa fa-table fa-2x"></i><span class="nav-text">Tablero de Mensajes</span></a></li>
+                <li><a href="#"><i class="fa fa-comment fa-2x"></i><span class="nav-text">Mensajes de Portales</span></a></li>
+                <!-- Puedes agregar más opciones según sea necesario -->
+            </ul>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-code fa-2x"></i>
+            <span class="nav-text"> Prueba de APIs </span>
+          </a>
+        </li>
+        <li class="has-subnav">
+          <a href="#">
+            <i class="fa fa-user fa-2x"></i>
+            <span class="nav-text"> Control de suplantación de usuarios </span>
+          </a>
+        </li>
+        </li>
+      </ul>
+
+      <ul class="logout">
+        <li>
+          <a href="#">
+            <i class="fa fa-sign-out fa-2x"></i>
+            <span class="nav-text"> Cerrar Sesión </span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+    <!-- <script>
+      $(document).ready(function () {
+        // Manejar clic en los enlaces de la barra lateral
+        $('.nav-link').click(function () {
+          // Quitar la clase 'active' de todos los enlaces
+          $('.nav-link').removeClass('active');
+
+          // Agregar la clase 'active' al enlace seleccionado
+          if ($(this).hasClass('not-a-tab')) {
+            $(this).addClass('active');
+          }
+        });
+
+        // Manejar clic en los enlaces con subnavegación
+        $('.has-subnav').click(function () {
+          // Quitar la clase 'active' de todos los enlaces
+          $('.has-subnav').removeClass('active');
+
+          // Agregar la clase 'active' al enlace seleccionado
+          if ($(this).hasClass('not-a-tab')) {
+            $(this).addClass('active');
+          }
+        });
+      });
+    </script> -->
+  </body>
+</html>

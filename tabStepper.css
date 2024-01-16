@@ -1,0 +1,309 @@
+/* Tabs */
+.card {
+    max-width: 25rem;
+    padding: 0;
+    border: none;
+    border-radius: 0.5rem;
+  }
+  
+  #nav-tab a.active {
+    border-bottom: 2px solid #F1A631;
+  }
+  .nav-link {
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+  }
+  .nav-link:hover {
+    color: #fff;
+    background-color: #F1A631;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 600;
+  }
+  
+  .nav-tabs .nav-link.active {
+    color: black;
+    background-color: white;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 600;
+  }
+  
+  /* .tab-content {
+    padding-bottom: 1.3rem;
+  } */
+  
+  .form-control {
+    background-color: rgb(241, 243, 247);
+    border: none;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+}
+
+.container-fluid {
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    padding-top: 120px;
+}
+
+/* stepper */
+.container{
+    width: 100%;
+    display: grid;
+    place-items: center;
+    /* min-height: 100vh; */
+}
+
+.form{
+    width: clamp(320px, 30%, 430px);
+    margin: 0 auto;
+    /* padding: 1.5rem; */
+}
+
+.buttons .btn {
+    margin: 5px;
+  }
+
+  .form-step{
+    display: none;
+    transform-origin: top;
+    animation: animate 0.5s;
+  }
+
+  @keyframes animate {
+    from{
+        transform: scale(0, 1);
+        opacity: 0;
+    }
+
+    to{
+        transform: scale(1, 1);
+        opacity: 1;
+    }
+  }
+
+  .form-step.active{
+    display: block;
+  }
+
+  /* Stepper Barra de progreso */
+  .progressbar{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    margin: 2rem 0 4rem 0;
+    counter-reset: step;
+    width: 180%;
+    left: -120px;
+  }
+
+  .progressbar::before, #progress{
+    content: "";
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    height: 1px;
+    width: 100%;
+    background-color: #dcdcdc;
+  }
+
+.progress{
+    width: 0%;
+    transition: 0.3s ease-in-out;
+}
+
+  .progress-step {
+      width: 25px;
+      height: 25px;
+      background-color: #dcdcdc;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      z-index: 0;
+  }
+
+  .progress-step::before{
+    counter-increment: step;
+    content: counter(step);
+  }
+
+  .progress-step::after{
+    content: attr(data-title);
+    position: absolute;
+    top: calc(100% + 0.5rem);
+    font-size: .80rem;
+    color: black;
+    font-weight: bold;
+  }
+
+  .progress-step.active{
+    background-color: #66DC71;
+    color: #fff;
+  }
+
+  /* Paso 1: Radio buttons */
+
+  /* Ocultar los radio buttons */
+  input[type="radio"] {
+    display: none;
+  }
+
+  /* Estilizar las etiquetas como botones */
+  #form1 label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #dcdcdc;
+    color: #000;
+    font-weight: bold;
+    border: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+    text-align: center;
+  }
+
+  /* Cambiar el color al pasar el ratón */
+  #form1 label:hover {
+    background-color: grey
+  }
+
+  /* Cambiar el color al seleccionar el radio button */
+  #form1 input[type="radio"]:checked + label {
+    background-color: gray;
+  }
+  
+  /* Paso 2: Nav Tabs */
+  /* Tab general del paso 2 */
+  .segundo-nav a.active {
+    border-bottom: 2px solid #1E90FF;
+  }
+  
+  .segundo-nav {
+    display: flex;
+    justify-content: center; /* Centrar las pestañas horizontalmente */
+    margin-bottom: 20px; /* Ajuste del margen inferior */
+  }
+
+  .segundo-nav .nav-link {
+    color: rgb(110, 110, 110);
+    font-weight: 500;
+  }
+  .segundo-nav .nav-link:hover {
+    color: #1E90FF;
+    background-color: white;
+  }
+  
+  .segundo-nav .nav-pills .nav-link.active {
+    color: #1E90FF;
+    background-color: white;
+    border-radius: 0.5rem 0.5rem 0 0;
+    font-weight: 600;
+  }
+  
+  .segundo-nav .tab-content {
+    padding-bottom: 1.3rem;
+  }
+  
+  /* Botones del contenido del paso 2 */
+  /* Estilizar las etiquetas como botones */
+  .segundo-nav label {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    background-color: #dec991;
+    color: #000;
+    border: none;
+    border-radius: 10px;
+    transition: background-color 0.3s;
+    text-align: center;
+    width: 100%;
+    vertical-align: middle;
+    border: 1px solid #000;
+  }
+
+  /* Cambiar el color al pasar el ratón */
+  .segundo-nav label:hover {
+    background-color: #ecb82d
+  }
+
+  /* Cambiar el color al seleccionar el radio button */
+  .segundo-nav input[type="radio"]:checked + label {
+    background-color: #ecb82d;
+  }
+
+  .segundo-nav label.checked {
+    /* Estilo para el estado seleccionado */
+    opacity: 0.8;
+    /* u otro estilo deseado */
+  }
+
+  /* Paso 3: Dropdown y seleccion */
+
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+
+  .dropdown-toggle{
+    background-color: #fff;
+  }
+  
+  #icono-select{
+    width: 35px;
+    height: 25px;
+  }
+
+  .dropdown-item span{
+    margin-left: auto;
+  }
+
+  input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey; /* Borde similar al de Android Studio */
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+input:focus {
+    border-color: #000; /* Cambia el color del borde al enfocar el campo */
+}
+
+textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid grey;
+    border-radius: 5px;
+    font-size: 16px;
+    outline: none;
+    resize: none; /* Evita que el usuario redimensione el textarea */
+    transition: border-color 0.3s ease-in-out;
+}
+
+textarea:focus {
+    border-color: #000;
+}
+
+#spanD{
+  font-weight: bold;
+}
+
+.imagen-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.input-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

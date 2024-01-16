@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gestor de usuarios UABC</title>
+    <link rel="shortcut icon" href="LogoUABC.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="tabStepper.css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <script src="tabStepper.js"></script>
+</head>
+
+<body>
+    <div class="form-group">
+        <div class="container-fluid">
+            <ul class="nav nav-tabs" id="nav-tab" role="tablist">
+                <li class="nav-item">
+                    <a class="nav-link active" id="envio-tab" data-toggle="tab" href="#envio" role="tab"
+                        aria-controls="envio" aria-selected="true">Envio de Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="historial-tab" data-toggle="tab" href="#historial" role="tab"
+                        aria-controls="historial" aria-selected="false">Historial de Mensajes</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="gestion-tab" data-toggle="tab" href="#gestion" role="tab"
+                        aria-controls="gestion" aria-selected="false">Gestión de Catalogos</a>
+                </li>
+            </ul>
+
+            <div class="tab-content">
+                <!-- 1st tab -->
+                <div class="tab-pane active" id="envio" role="tabpanel" aria-labelledby="envio-tab">
+                    <div class="container">
+                        <form action="#" class="form">
+                            <!-- Barra de Progreso -->
+                            <div class="progressbar">
+
+                                <div class="progress" id="progress"></div>
+
+                                <div class="progress-step active" data-title="Sistemas Objetivo"></div>
+                                <div class="progress-step" data-title="Audiencias Objetivo"></div>
+                                <div class="progress-step" data-title="Categoria de Mensajes"></div>
+                                <div class="progress-step" data-title="Resumen del Mensaje"></div>
+                            </div>
+
+                            <!-- Pasos -->
+                            <div class="form-step active" id="form1">
+                                <!-- Primer radio button -->
+                                <center>
+                                <input type="radio" id="button1" name="buttons" required>
+                                <label for="button1">Aplicación del Personal</label></center>
+
+                                <!-- Segundo radio button -->
+                                <center>
+                                <input type="radio" id="button2" name="buttons" required>
+                                <label for="button2">Aplicación de Estudiantes</label></center>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-next btn-success">Siguiente</a>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <!-- nav options -->
+                                <div class="segundo-nav row">
+                                    <ul class="nav nav-pills" id="pills-tab" role="tablist">
+                                        <li class="nav-item">
+                                          <a class="nav-link active" id="normales-tab" data-toggle="pill" href="#normales" role="tab" aria-controls="normales" aria-selected="true">NORMALES</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="prioritarios-tab" data-toggle="pill" href="#prioritarios" role="tab" aria-controls="prioritarios" aria-selected="false">PRIORITARIOS</a>
+                                        </li>
+                                        <li class="nav-item">
+                                          <a class="nav-link" id="pruebas-tab" data-toggle="pill" href="#pruebas" role="tab" aria-controls="pruebas" aria-selected="false" style="width: 100px;">PRUEBAS</a>
+                                        </li>
+                                      </ul>
+                                      <!-- content -->
+                                      <div class="tab-content">
+                                        <!-- Tab Normales -->
+                                        <div class="tab-pane active" id="normales" role="tabpanel" aria-labelledby="normales-tab">
+                                            <input type="radio" id="buttonAudiencias1" name="audiencias" required>
+                                            <label for="buttonAudiencias1">Estudiantes General</label>
+                                            <input type="radio" id="buttonAudiencias2" name="audiencias" required>
+                                            <label for="buttonAudiencias2">Estudiantes Mexicali</label>
+                                            <input type="radio" id="buttonAudiencias3" name="audiencias" required>
+                                            <label for="buttonAudiencias3">Estudiantes Ensenada</label>
+                                            <input type="radio" id="buttonAudiencias4" name="audiencias" required>
+                                            <label for="buttonAudiencias4">Estudiantes Tijuana</label>
+                                        </div>
+                                        <!-- Tab Prioritarios -->
+                                        <div class="tab-pane" id="prioritarios" role="tabpanel" aria-labelledby="prioritarios-tab">
+                                            <input type="radio" id="buttonAudiencias5" name="audiencias" required>
+                                            <label for="buttonAudiencias5">Prioritario Estudiantes General</label>
+                                            <input type="radio" id="buttonAudiencias6" name="audiencias" required>
+                                            <label for="buttonAudiencias6">Prioritario Estudiantes Mexicali</label>
+                                            <input type="radio" id="buttonAudiencias7" name="audiencias" required>
+                                            <label for="buttonAudiencias7">Prioritario Estudiantes Ensenada</label>
+                                            <input type="radio" id="buttonAudiencias8" name="audiencias" required>
+                                            <label for="buttonAudiencias8">Prioritario Estudiantes Tijuana</label>
+                                        </div>
+                                        <!-- Tab Pruebas -->
+                                        <div class="tab-pane" id="pruebas" role="tabpanel" aria-labelledby="pruebas-tab">
+                                            <input type="radio" id="buttonAudiencias9" name="audiencias" required>
+                                            <label for="buttonAudiencias9">Tester Estudiantes General</label>
+                                            <input type="radio" id="buttonAudiencias10" name="audiencias" required>
+                                            <label for="buttonAudiencias10">Tester Estudiantes Mexicali</label>
+                                            <input type="radio" id="buttonAudiencias11" name="audiencias" required>
+                                            <label for="buttonAudiencias11">Tester Estudiantes Ensenada</label>
+                                            <input type="radio" id="buttonAudiencias12" name="audiencias" required>
+                                            <label for="buttonAudiencias12">Tester Estudiantes Tijuana</label>
+                                        </div>
+                                        </div>
+                                      </div>                               
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-prev btn-primary">Volver</a>
+                                    <a href="#" class="btn btn-next btn-success">Siguiente</a>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="dropdown show">
+                                    <button class="btn btn-light dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">                            
+                                        <span>Seleccione el tipo de mensaje</span>
+                                    </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                      <a class="dropdown-item" href="#"><img src="imagen-prueba.png" id="icono-select" alt="Icono"><span>Suspensión de Actividades</span></a>
+                                    </div>
+                                    <br><br>
+                                    <span id="spanD">Título</span><br>
+                                    <input type="text" readonly>
+                                    <br><br>
+                                    <span id="spanD">Cuerpo</span><br>
+                                    <textarea rows="4">
+                                    </textarea>
+                                  </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-prev btn-primary">Volver</a>
+                                    <a href="#" class="btn btn-next btn-success">Siguiente</a>
+                                </div>
+                            </div>
+                            <div class="form-step">
+                                <div class="imagen-input">
+                                    <div class="input-container">
+                                        <span id="text4">Imagen</span>
+                                    <img src="imagen-prueba.png" alt="Icono">
+                                </div>
+                                <div class="input-container">
+                                    <span>Título</span>
+                                    <input type="text" name="input" readonly>
+                                </div>
+                                  </div>
+                                  <div class="input-container">
+                                  <span>Cuerpo</span>
+                                    <textarea rows="4" readonly>
+                                    </textarea>
+                                </div>
+                                <div class="input-container">
+                                    <span>Audiencias Objetivo</span>
+                                    <input type="text" name="input" readonly>
+                                </div>
+                                <div class="buttons">
+                                    <a href="#" class="btn btn-prev btn-primary">Volver</a>
+                                    <a href="#" class="btn btn-next btn-success">Enviar</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <!-- 2nd tab -->
+                <div class="tab-pane" id="historial" role="tabpanel" aria-labelledby="historial-tab">ddddddddd</div>
+                <!-- 3nd tab -->
+                <div class="tab-pane" id="gestion" role="tabpanel" aria-labelledby="gestion-tab"> </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
